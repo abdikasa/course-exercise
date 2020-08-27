@@ -9,6 +9,12 @@ const Content = ({ content }) => {
           <Part key={item.id} name={item.name} exercises={item.exercises} />
         );
       })}
+      <Part
+        name="Total # of Exercises"
+        exercises={content.reduce((acc, curr) => {
+          return acc + curr.exercises;
+        }, 0)}
+      ></Part>
     </>
   );
 };
