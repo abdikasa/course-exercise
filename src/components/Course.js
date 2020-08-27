@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "./Header";
+import Content from "./Content";
 
-const Course = () => {
+const Course = ({ course }) => {
   return (
     <>
-      <Header />
-      <Content />
+      <Header header={course.name} />
+      <Content content={course.parts} />
     </>
   );
 };
